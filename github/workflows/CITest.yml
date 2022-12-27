@@ -1,0 +1,14 @@
+name: test PR merged
+on:
+  pull_request:
+    branches:
+      - develop
+    types: [closed]
+jobs:
+if: github.event.pull_request.merged == true
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@develop 
+    - run: npm ci
+    - run: npm run test
