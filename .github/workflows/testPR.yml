@@ -1,10 +1,9 @@
-name: test PR merged
+name: test PR
 
 on:
   pull_request:
     branches:
       - develop
-    types: [closed]
 
 jobs:
   test:
@@ -14,4 +13,4 @@ jobs:
         with:
           ref: 'develop'
       - run: npm ci
-      - run: npm run test
+      - run: npm run test -- --watchAll=false
