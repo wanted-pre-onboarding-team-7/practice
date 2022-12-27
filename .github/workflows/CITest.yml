@@ -10,6 +10,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@develop
+      - uses: actions/checkout@v3
+        with:
+          ref: 'develop'
       - run: npm ci
       - run: npm run test
