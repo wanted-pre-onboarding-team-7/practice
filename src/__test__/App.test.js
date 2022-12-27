@@ -6,7 +6,7 @@ describe('App 컴포넌트 렌더링 테스트', () => {
   test('<App /> 렌더링이 되나요?', async () => {
     render(<App />);
 
-    const headingEl = screen.getByRole('heading', makeOptions(1, 'app'));
+    const headingEl = screen.getByRole('heading', makeOptions(1, '없음'));
     expect(headingEl).toBeInTheDocument();
   });
 });
